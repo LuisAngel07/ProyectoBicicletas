@@ -1,0 +1,685 @@
+
+.ui-icon.eliminar {
+	background-image: url('../imagenes/mantenimiento/delete.png') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.bookstack {
+	background-image: url('../imagenes/mantenimiento/bookstack.png') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.libro {
+	background-image: url('../imagenes/mantenimiento/libro.png') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.dinero {
+	background-image: url('../imagenes/mantenimiento/money.png') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.correo {
+	background-image: url('../imagenes/mantenimiento/email-go-icon.png')
+		!important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.vistaPrevia {
+	background-image: url('../imagenes/mantenimiento/btn_vistaprevia.png')
+		!important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.verReporte {
+	background-image: url('../imagenes/mantenimiento/chart_bar.png')
+		!important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.ok {
+	background-image: url('../imagenes/mantenimiento/fn1392.bmp') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.carpeta {
+	background-image: url('../imagenes/mantenimiento/opened_folder.gif') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.evaluar {
+	background-image: url('../imagenes/mantenimiento/hr_credits.png')
+		!important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.confirmar {
+	background-image: url('../imagenes/mantenimiento/application_go.png')
+		!important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.inactivarRegistro {
+	background-image: url('../imagenes/mantenimiento/btn_inactivar2_16.png')
+		!important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.dinero {
+	background-image: url('../imagenes/mantenimiento/fn2504.bmp') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.proveedor {
+	background-image: url('../imagenes/mantenimiento/btn_iper.png')
+		!important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.importacion {
+	background-image: url('../imagenes/mantenimiento/chart-up.png')
+		!important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.oficina {
+	background-image: url('../imagenes/mantenimiento/sede.png') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.trabajador {
+	background-image:
+		url('../imagenes/mantenimiento/btn_iper_trabajador.png') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.procesar {
+	background-image: url('../imagenes/mantenimiento/fn1744.bmp') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.subcriterio {
+	background-image: url('../imagenes/mantenimiento/table_add.png')
+		!important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.subir {
+	background-image: url('../imagenes/mantenimiento/subir.png')
+		!important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.noaplica {
+	background-image: url('../imagenes/mantenimiento/fn1306.bmp') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.cuenta {
+	background-image: url('../imagenes/mantenimiento/book_open.png')
+		!important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.limpiar {
+	background-image: url('../imagenes/mantenimiento/limpiar.png')
+		!important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.inicio {
+	background-image: url('../imagenes/mantenimiento/house.png') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.asignarMedico {
+	background-image: url('../imagenes/mantenimiento/fn1304.bmp') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.despachos {
+	background-image: url('../imagenes/mantenimiento/fn2878.bmp') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.actCons {
+	background-image: url('../imagenes/mantenimiento/fn2684.bmp') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.anularReingreso {
+	background-image: url('../imagenes/mantenimiento/fn2426.bmp') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.lote {
+	background-image: url('../imagenes/mantenimiento/fn2674.bmp') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.notaEnfer {
+	background-image: url('../imagenes/mantenimiento/fn2758.bmp') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.asigTopico {
+	background-image: url('../imagenes/mantenimiento/fn2288.bmp') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.relevo {
+	background-image: url('../imagenes/mantenimiento/fn2454.bmp') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.asigOrden {
+	background-image: url('../imagenes/mantenimiento/fn2538.bmp') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.altaMedica {
+	background-image: url('../imagenes/mantenimiento/fn2478.bmp') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.aprobar {
+	background-image: url('../imagenes/mantenimiento/fn2460.bmp') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.rechazar {
+	background-image: url('../imagenes/mantenimiento/fn2462.bmp') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.imprimirInforme {
+	background-image: url('../imagenes/mantenimiento/fn1034.bmp') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.impresiones {
+	background-image: url('../imagenes/mantenimiento/fn2686.bmp') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.firmaenfermera {
+	background-image: url('../imagenes/mantenimiento/fn2562.bmp') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.printseleccion {
+	background-image: url('../imagenes/mantenimiento/fn1746.bmp') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.volvervigenciaoa {
+	background-image: url('../imagenes/mantenimiento/fn1258.bmp') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.ajustar {
+	background-image: url('../imagenes/mantenimiento/fn1796.bmp') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.hospitalizacion {
+	background-image: url('../imagenes/mantenimiento/fn2678.bmp') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.ampliarvigenciaoa {
+	background-image: url('../imagenes/mantenimiento/fn2474.bmp') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.adelantos {
+	background-image: url('../imagenes/mantenimiento/fn2496.bmp') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.presupuesto {
+	background-image: url('../imagenes/mantenimiento/fn2142.bmp') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.hojaidentificacion {
+	background-image: url('../imagenes/mantenimiento/fn1092.bmp') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.retornar {
+	background-image: url('../imagenes/mantenimiento/fn2480.bmp') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.modificar {
+	background-image: url('../imagenes/mantenimiento/fn1052.ico') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.asignatopico {
+	background-image: url('../imagenes/mantenimiento/fn2288.bmp') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.emergencia {
+	background-image: url('../imagenes/mantenimiento/fn1998.bmp') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.unirexp {
+	background-image: url('../imagenes/mantenimiento/fn2128.bmp') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.supervisor {
+	background-image: url('../imagenes/mantenimiento/fn1022.ico') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.bloquear {
+	background-image: url('../imagenes/mantenimiento/fn2568.bmp') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.efectivo {
+	background-image: url('../imagenes/mantenimiento/fn1118.ico') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.cuotas {
+	background-image: url('../imagenes/mantenimiento/fn1118.ico') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.prioridadhc {
+	background-image: url('../imagenes/mantenimiento/fn1464.bmp') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.generarhc {
+	background-image: url('../imagenes/mantenimiento/fn1348.bmp') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.desbloquear {
+	background-image: url('../imagenes/mantenimiento/fn2484.bmp') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.regenerar {
+	background-image: url('../imagenes/mantenimiento/fn1138.bmp') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.infadicional {
+	background-image: url('../imagenes/mantenimiento/fn1550.bmp') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.infhhcc {
+	background-image: url('../imagenes/mantenimiento/jagserv.bmp')
+		!important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.codigobarra {
+	background-image: url('../imagenes/mantenimiento/fn2752.bmp') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.detalle {
+	background-image: url('../imagenes/mantenimiento/fn1686.bmp') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.fpago {
+	background-image: url('../imagenes/mantenimiento/fn2688.bmp') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.prioridad {
+	background-image: url('../imagenes/mantenimiento/fn2682.bmp') !important;
+	max-width: 16px;
+	max-height: 16px;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.ventana {
+	background-image: url('../imagenes/mantenimiento/fn1044.bmp') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.aperturaemergencia {
+	background-image: url('../imagenes/mantenimiento/fn2300.bmp') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.reingreso {
+	background-image: url('../imagenes/mantenimiento/fn2726.bmp') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.imprimirTOA {
+	background-image: url('../imagenes/mantenimiento/fn1472.bmp') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.imprimirOrdenAtencion {
+	background-image: url('../imagenes/mantenimiento/fn1438.bmp') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.relacionar {
+	background-image: url('../imagenes/mantenimiento/fn2722.bmp') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.cambiar {
+	background-image: url('../imagenes/mantenimiento/fn1278.bmp') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.procesarDiagnostico {
+	background-image: url('../imagenes/mantenimiento/fn1294.bmp') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.cambiarClaveFirma {
+	background-image: url('../imagenes/mantenimiento/fn1104.bmp') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.cambiarClaveFirmaPool {
+	background-image: url('../imagenes/mantenimiento/fn2560.bmp') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.liberar {
+	background-image: url('../imagenes/mantenimiento/fn1266.bmp') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.estados {
+	background-image: url('../imagenes/mantenimiento/fn1344.bmp') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.reportelista {
+	background-image: url('../imagenes/mantenimiento/fn1030.bmp') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.actprecios {
+	background-image: url('../imagenes/mantenimiento/fn1296.bmp') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.adelanto {
+	background-image: url('../imagenes/mantenimiento/fn2504.bmp') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.tratamiento {
+	background-image: url('../imagenes/mantenimiento/fn1052.bmp') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.imprimirOAM {
+	background-image: url('../imagenes/mantenimiento/fn1290.bmp') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.verCE {
+	background-image: url('../imagenes/mantenimiento/fn1290.bmp') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.imprimirReceta {
+	background-image: url('../imagenes/mantenimiento/fn1690.bmp') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.imprimirDescanso {
+	background-image: url('../imagenes/mantenimiento/copy1.bmp') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.salvar {
+	background-image: url('../imagenes/mantenimiento/fn2764.bmp') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.nuevo {
+	background-image: url('../imagenes/mantenimiento/btn_nuevo.png')
+		!important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.nuevoSalud {
+	background-image: url('../imagenes/mantenimiento/fn1298.bmp') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.alerta {
+	background-image: url('../imagenes/mantenimiento/btn_alert.png')
+		!important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.pregunta {
+	background-image: url('../imagenes/mantenimiento/btn_pregunta.png')
+		!important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.editar {
+	background-image: url('../imagenes/mantenimiento/btn_editar1_16.png')
+		!important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.guardar {
+	background-image: url('../imagenes/mantenimiento/btn_guardar.png')
+		!important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.guardarSalud {
+	background-image: url('../imagenes/mantenimiento/fn1452.bmp') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.cancelar {
+	background-image: url('../imagenes/mantenimiento/btn_regresar.png')
+		!important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.buscar {
+	background-image: url('../imagenes/mantenimiento/btn_buscar.png')
+		!important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.aceptar {
+	background-image: url('../imagenes/btn_seleccionar.png')
+		!important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.ver {
+	background-image: url('../imagenes/btn_vistaprevia.png')
+		!important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.inactivar {
+	background-image: url('../imagenes/mantenimiento/btn_inactivar1_16.png')
+		!important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.agregar {
+	background-image: url('../imagenes/mantenimiento/btn_plus01_16.png')
+		!important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.agregar10 {
+	background-image: url('../imagenes/mantenimiento/agregar10.png')
+		!important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.controladd {
+	background-image: url('../imagenes/mantenimiento/btn_agregar2_16.png')
+		!important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.siguiente {
+	background-image: url('../imagenes/mantenimiento/btn_siguiente1_16.png')
+		!important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.anterior {
+	background-image: url('../imagenes/mantenimiento/btn_anterior1_16.png')
+		!important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.cargar {
+	background-image: url('../imagenes/mantenimiento/btn_refrescar1_16.png')
+		!important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.exportar_excel {
+	background-image: url('../imagenes/mantenimiento/ic_excel.gif')
+		!important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.imprimir {
+	background-image: url('../imagenes/mantenimiento/btn_imprimir.png')
+		!important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.copiar {
+	background-image: url('../imagenes/mantenimiento/btn_copiar.png')
+		!important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.verificar {
+	background-image: url('../imagenes/mantenimiento/ver.png') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.cerrar {
+	background-image: url('../imagenes/mantenimiento/btn_exit.jpg')
+		!important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.control {
+	background-image: url('../imagenes/mantenimiento/btn_document1_16.png')
+		!important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.evaluacion {
+	background-image: url('../imagenes/mantenimiento/btn_catalog01_16.png')
+		!important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.eliminar {
+	background-image: url('../imagenes/mantenimiento/btn_eliminar.gif')
+		!important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.eliminarSalud {
+	background-image: url('../imagenes/mantenimiento/stopsign.ico' )
+		!important;
+	background-position: 0 0 !important;
+	height: 16px !important;
+	width: 16px !important;
+	max-height: 16px !important;
+	max-width: 16px !important;
+}
+
+.ui-icon.cambio {
+	background-image: url('../imagenes/mantenimiento/btn_cambio.png')
+		!important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.condicion {
+	background-image: url('../imagenes/mantenimiento/btn_siguiente4_16.png')
+		!important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.historial {
+	background-image:
+		url('../imagenes/mantenimiento/btn_folderdocuments2_16.png')
+		!important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.bin-empty {
+	background-image: url('../imagenes/mantenimiento/recycle_bin_empty.png')
+		!important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.bin-full {
+	background-image: url('../imagenes/mantenimiento/recycle_bin_full.png')
+		!important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.procesar {
+	background-image: url('../imagenes/mantenimiento/btn_Procesar.png')
+		!important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.descargar {
+	background-image: url('../imagenes/mantenimiento/btn_download1_16.png')
+		!important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.observacion {
+	background-image: url('../imagenes/mantenimiento/btn_note01_16.png')
+		!important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.vistaprevia {
+	background-image: url('../imagenes/mantenimiento/btn_vistaprevia.png')
+		!important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.estadocuenta {
+	background-image: url('../imagenes/mantenimiento/fn1456.bmp') !important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.archivo {
+	background-image: url('../imagenes/mantenimiento/btn_files1_16.png')
+		!important;
+	background-position: 0 0 !important;
+}
+
+.ui-icon.servicio {
+	background-image: url('../imagenes/mantenimiento/btn_servicio.PNG') !important;
+	background-position: 0 0 !important;
+}

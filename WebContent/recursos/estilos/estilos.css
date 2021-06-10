@@ -1,0 +1,1165 @@
+#progress {
+    background: #333;
+    border-radius: 13px;
+    height: 20px;
+    width: 300px;
+    padding: 3px;
+}
+
+#progress:after {
+    content: '';
+    display: block;
+    background: orange;
+    width: 50%;
+    height: 100%;
+    border-radius: 9px;
+}
+
+
+@font-face {
+font-family: Open sans;
+src: url(OpenSans-Semibold.ttf);
+}
+
+.controlCajaTextoGrande.mainCabezera div {
+	height: auto !important;
+}
+
+.ui-widget .ui-widget {
+	font-size: 11px !important;
+	font-family: "Open sans" !important;
+}
+
+h2 {
+	text-decoration: underline;
+	color: #4669A9;
+	font-family: Open sans;
+}
+
+.tituloSubrayado.ui-widget {
+	text-decoration: underline;
+	color: #4669A9;
+	font-family: Open sans;
+	font-size: 15px !important;
+}
+
+.ui-widget {
+	font-size: 11px !important;
+	font-family: Open sans !important;
+}
+
+.ui-widget-overlay {
+	filter: alpha(opacity = 40); /* works in IE 7 */
+	opacity: 0.4; /* works in Firefox */
+}
+
+.tableContainer {
+	color: #0076BF;
+	margin: -10px 0px -10px 0px;
+	border-spacing: 10px;
+	empty-cells: show;
+	width: 90%;
+	text-align: left;
+}
+
+.colored {
+	background-color: #FFFFFF;
+	color: #FF0000;
+}
+
+.ui-growl {
+	z-index: 999999 !important;
+}
+
+.columna-100 {
+	width: 100px !important;
+}
+
+.input-invisible {
+	margin: 0px !important;
+	padding: 0px !important;
+	border: none !important;
+	box-shadow: none !important;
+	width: 100% !important;
+	height: auto !important;
+}
+
+.idvalorRequerido .ui-progressbar-value {
+	background: #660000 !important;
+}
+
+.idvalorRegistrado .ui-progressbar-value {
+	background: #85b2cb
+		-webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255,
+		0.8)), to(rgba(255, 255, 255, 0))) !important;
+}
+
+.idvalorPromedio .ui-progressbar-value {
+	background: #0000ff !important;
+}
+
+.tituloPrincipal {
+	font-size: 1.4em;
+	padding: 0px 0px 0px 0px;
+	height: 35px;
+}
+
+.tituloPrincipal .ui-widget-header {
+	border: 0px;
+	font-size: 0.6em;
+}
+
+.tituloPrincipal .ui-breadcrumb {
+	padding: 0px 0px 0px 0px;
+}
+
+
+.contenedorPrincipalExtraChico1 {
+	margin-top: 5px;
+	margin-left: 5px;
+	width: 300px !important;
+}
+
+.contenedorPrincipalExtraChico {
+	margin-top: 5px;
+	margin-left: 5px;
+	width: 350px !important;
+}
+
+.contenedorPrincipalChico2 {
+	margin-top: 5px;
+	margin-left: 5px;
+	width: 490px !important;
+}
+
+.contenedorPrincipalChico3 {
+	margin-top: 5px;
+	margin-left: 5px;
+	width: 520px !important;
+}
+
+.contenedorPrincipalChico4 {
+	margin-top: 5px;
+	margin-left: 5px;
+	width: 570px !important;
+}
+
+.contenedorPrincipalChico {
+	margin-top: 5px;
+	margin-left: 5px;
+	width: 600px !important;
+}
+
+.contenedorPrincipal {
+	margin-top: 5px;
+	margin-left: 5px;
+	width: 800px !important;;
+}
+
+.contenedorPrincipal2 {
+	margin-top: 5px;
+	margin-left: 5px;
+	width: 820px !important;;
+}
+
+.contenedorPrincipalPersonas {
+	margin-top: 5px;
+	margin-left: 5px;
+	width: 830px !important;;
+}
+
+.contenedorPrincipalExtraMediano2 {
+	margin-top: 5px;
+	margin-left: 5px;
+	width: 720px !important;;
+}
+
+.contenedorPrincipalExtraMediano {
+	margin-top: 5px;
+	margin-left: 5px;
+	width: 750px !important;;
+}
+
+.contenedorPrincipalMediano {
+	margin-top: 5px;
+	margin-left: 5px;
+	width: 900px !important;;
+}
+
+.contenedorPrincipalGrande {
+	margin-top: 5px;
+	margin-left: 5px;
+	width: 1000px !important;;
+}
+
+.contenedorPrincipalGrande1 {
+	margin-top: 5px;
+	margin-left: 5px;
+	width: 1120px !important;
+}
+
+.contenedorPrincipalGrande2 {
+	margin-top: 5px;
+	margin-left: 5px;
+	width: 1050px !important;
+}
+
+.contenedorPrincipalExtraGrande {
+	margin-top: 5px;
+	margin-left: 5px;
+	width: 1200px !important;
+}
+
+.contenedorPrincipalAsMarcar {
+	margin-top: 5px;
+	margin-left: 5px;
+	width: 750px !important;
+	position: absolute;
+}
+
+.contenedorPrincipalExtraGrande2 {
+	margin-top: 5px;
+	margin-left: 5px;
+	width: 1250px !important;
+}
+
+.contenedorPrincipalExtraGrande3 {
+	margin-top: 5px;
+	margin-left: 5px;
+	width: 1300px !important;
+}
+
+.botonTextoImagen {
+	width: 100px;
+	font-size: 10px;
+}
+
+.botonTextoImagenChico {
+	width: 30px;
+	font-size: 10px;
+}
+
+.botonTextoImagenChico2 {
+	width: 50px;
+	font-size: 10px;
+}
+
+.botonTextoImagenChico3 {
+	width: 75px;
+	font-size: 10px;
+}
+
+.botonTextoImagenChico1 {
+	width: 25px;
+	font-size: 10px;
+}
+
+.botonTextoImagenMediano {
+	width: 110px;
+	font-size: 10px;
+}
+
+element.style {
+	style =height: 20px
+}
+
+.botonTextoImagenLogin {
+	width: 110px;
+	height: 25px;
+	font-size: 12px;
+	font-weight: bolder;
+	background-color: red;
+	color: white;
+}
+
+.botonTextoImagenGrande {
+	width: 150px;
+	font-size: 10px;
+	height: 22px
+}
+
+.botonTextoImagenGrandeRojo {
+	width: 150px;
+	font-size: 10px;
+	height: 22px;
+	background-color: red !important;
+}
+
+.botonTextoImagenExtraGrande {
+	width: 200px;
+	font-size: 10px;
+}
+
+.separadorEntreContenedores {
+	width: 5px;
+	height: 5px;
+}
+
+.textoizquierda {
+	float: left;
+	color: black;
+	font-weight: lighter;
+}
+
+.formularioEtiquetaChico1 {
+	float: left;
+	color: #2779aa !important;
+	font-weight: bold !important;
+	width: 82px;
+}
+
+.formularioEtiquetaChico0 {
+	float: left;
+	color: #2779aa !important;
+	font-weight: bold !important;
+	width: 80px;
+}
+
+.formularioEtiquetaChico {
+	float: left;
+	color: #2779aa !important;
+	font-weight: bold !important;
+	width: 100px;
+}
+
+.formularioEtiquetaMediano1 {
+	float: left;
+	color: #2779aa !important;
+	font-weight: bold !important;
+	width: 110px;
+}
+
+.formularioEtiquetaMediano {
+	float: left;
+	color: #2779aa !important;
+	font-weight: lighter;
+	width: 120px;
+}
+
+.formularioEtiqueta {
+	float: left;
+	color: black;
+	font-weight: lighter;
+	width: 150px;
+}
+
+.formularioEtiquetaGrande {
+	float: left;
+	color: black;
+	font-weight: lighter;
+	width: 200px;
+}
+
+.formularioEtiquetaReporte {
+	float: left;
+	color: white;
+	font-weight: lighter;
+	background-color: red;
+	font-weight: bold;
+}
+
+.controlCalendarFecha {
+	width: 90px;
+}
+
+.controlCalendarFechaHora input {
+	width: 120px;
+}
+
+.controlCajaTextoCodigo {
+	float: left;
+	color: black;
+	font-weight: lighter;
+	text-align: right;
+	width: 50px;
+}
+
+.controlCajaTextoCodigoCadena {
+	float: left;
+	color: black;
+	font-weight: lighter;
+	text-align: left;
+	width: 50px;
+}
+
+.controlCajaTextoNumero {
+	float: left;
+	color: black;
+	font-weight: lighter;
+	width: 50px;
+	text-align: right;
+}
+
+.controlCajaTextoId {
+	float: left;
+	color: black;
+	font-weight: lighter;
+	width: 20px;
+	text-align: center;
+}
+
+.controlCajaTextoEdad {
+	float: left;
+	color: black;
+	font-weight: lighter;
+	width: 20px;
+	text-align: right;
+}
+
+.controlCajaTextoPeso {
+	float: left;
+	color: black;
+	font-weight: lighter;
+	width: 33px;
+	text-align: center;
+}
+
+.controlCajaTextoNumeroMediano {
+	float: left;
+	color: black;
+	font-weight: lighter;
+	width: 90px;
+	text-align: right;
+}
+
+.controlCajaTextoNombre {
+	float: left;
+	color: black;
+	font-weight: lighter;
+	width: 250px;
+}
+
+.controlCajaTextoNombre1 {
+	float: left !important;
+	color: black !important;
+	font-weight: lighter !important;
+	width: 190px !important;
+}
+
+.controlCajaTextoCorreo {
+	float: left;
+	color: black;
+	font-weight: lighter;
+	width: 150px;
+}
+
+.controlCajaTextoMedio {
+	float: left;
+	color: black;
+	font-weight: lighter;
+	width: 290px;
+}
+
+.controlCajaTextoMedio2 {
+	float: left;
+	color: black;
+	font-weight: lighter;
+	width: 350px;
+}
+
+.controlCajaTextoChico {
+	float: left;
+	color: black;
+	font-weight: lighter;
+	width: 100px;
+}
+
+.controlCajaTextoChico1 {
+	float: left;
+	color: black;
+	font-weight: lighter;
+	width: 80px;
+}
+
+.controlCajaTexto {
+	float: left;
+	color: black;
+	font-weight: lighter;
+	width: 200px;
+}
+
+.controlCajaTextoGrande {
+	float: left;
+	color: black;
+	font-weight: lighter;
+	width: 450px;
+}
+
+.controlCajaTextoGrande1 {
+	float: left;
+	color: black;
+	font-weight: lighter;
+	width: 550px;
+}
+
+.controlCajaTextoGrande2 {
+	float: left;
+	color: black;
+	font-weight: lighter;
+	width: 600px;
+}
+
+.controlTextArea {
+	float: left;
+	color: black;
+	font-weight: lighter;
+	width: 200px;
+}
+
+.controlTextAreaRegular {
+	float: left;
+	color: black;
+	font-weight: lighter;
+	width: 250px;
+}
+
+.controlTextAreaMediano {
+	float: left;
+	color: black;
+	font-weight: lighter;
+	width: 350px;
+}
+
+.controlTextAreaGrande {
+	float: left;
+	color: black;
+	font-weight: lighter;
+	width: 450px;
+}
+
+.controlTextAreaGrande1 {
+	float: left;
+	color: black;
+	font-weight: lighter;
+	width: 550px;
+}
+
+.controlTextAreaGrande2 {
+	float: left;
+	color: black;
+	font-weight: lighter;
+	width: 600px;
+}
+
+.controlTextAreaExtraGrande {
+	float: left;
+	color: black;
+	font-weight: lighter;
+	width: 800px;
+}
+
+.controlTextAreaExtraGrande1 {
+	float: left;
+	color: black;
+	font-weight: lighter;
+	width: 900px;
+}
+
+.controlListaDesplegableChico {
+	float: left;
+	color: black;
+	font-weight: lighter;
+	width: 100px !important;
+}
+
+.controlListaDesplegableMediano {
+	float: left;
+	color: black;
+	font-weight: lighter;
+	width: 150px !important;
+}
+
+.controlListaDesplegableMedianoEmergen {
+	float: left;
+	color: black;
+	font-weight: lighter;
+	width: 170px !important;
+}
+
+.controlListaDesplegable {
+	float: left;
+	color: black;
+	font-weight: lighter;
+	width: 200px !important;
+}
+
+.controlListaDesplegable5 {
+	float: left;
+	color: black;
+	font-weight: lighter;
+	width: 250px !important;
+}
+
+.controlCajaTextoLectura {
+	background: #deedf7 !important;
+	opacity: 1.0 !important;
+	color: #222222 !important;
+}
+
+.controlListaDesplegable2 {
+	float: left;
+	color: black;
+	font-weight: lighter;
+	width: 300px !important;
+}
+
+.controlListaDesplegableGrande {
+	float: left;
+	color: black;
+	font-weight: lighter;
+	width: 400px !important;
+}
+
+.controlListaDesplegableConflictos {
+	float: left;
+	color: black;
+	font-weight: lighter;
+	width: 350px !important;
+}
+
+.controlCheckBox {
+	float: left;
+	color: black;
+	font-weight: lighter;
+}
+
+.controlColorPicker {
+	float: left;
+	color: black;
+	font-weight: lighter;
+}
+
+.controlPanelGridColumns {
+	border-style: none !important;
+}
+
+table.controlPanelGridColumns {
+	border-style: none;
+}
+
+table.controlPanelGridColumns th {
+	border-style: none;
+}
+
+table.controlPanelGridColumns td {
+	border-style: none;
+}
+
+table.controlPanelGridColumns tr {
+	border-style: none;
+}
+
+.Ipercabecera1 div.ui-dt-c {
+	background-color: rgb(214, 18, 48);
+	color: white;
+}
+
+.Ipercabecera2 div.ui-dt-c {
+	background-color: rgb(12, 22, 67);
+	color: white;
+}
+
+.Ipercabecera3 div.ui-dt-c {
+	background-color: rgb(5, 61, 6);
+	color: white;
+}
+
+.Ipercabecera4 div.ui-dt-c {
+	background-color: rgb(201, 211, 5);
+	color: white;
+}
+
+.Ipercabecera5 div.ui-dt-c {
+	background-color: rgb(32, 13, 57);
+	color: white;
+}
+
+.Ipercabecera6 div.ui-dt-c {
+	background-color: rgb(75, 136, 212);
+	color: white;
+}
+
+.Ipercabecera7 div.ui-dt-c {
+	background-color: rgb(220, 136, 132);
+	color: white;
+}
+
+.Ipercabecera8 div.ui-dt-c {
+	background-color: rgb(120, 136, 212);
+	color: white;
+}
+
+.IpercabeceraEstatica div.ui-dt-c {
+	background-color: rgb(169, 147, 80);
+	color: white;
+}
+
+.iper .ui-state-default {
+	border: 1px solid #aed0ea;
+	font-weight: bold;
+	background: transparent;
+}
+
+.highlight {
+	background: yellow !important;
+}
+
+.columnatablaIzquierda {
+	text-align: left;
+}
+
+.columnatablaCentro {
+	text-align: center;
+}
+
+.columnatablaDerecha {
+	text-align: right;
+}
+
+.columnGrid td {
+	vertical-align: top;
+	margin: 0px;
+}
+
+.columnGridMiddle td {
+	vertical-align: middle;
+	margin: 0px;
+}
+
+.columnGridBottom td {
+	vertical-align: bottom !important;
+	margin: 0px !important;
+}
+
+span.icoUsuario {
+	width: 14px;
+	height: 14px;
+	margin: 3px;
+	background: url("../imagenes/ico_usuario.gif");
+}
+
+span.icoClave {
+	width: 14px;
+	height: 14px;
+	margin: 3px;
+	background: url("../imagenes/ico_clave.gif") left no-repeat;
+	float: left;
+}
+
+.ui-panel-title {
+	font-weight: 600;
+}
+
+.tab {
+	border-width: 0;
+	height: 0px;
+	width: 100%
+}
+
+.iperdetalle {
+	border: 0px;
+	border-collapse: collapse;
+}
+
+.iperdetalle td {
+	border: 1px solid #aed0ea;
+}
+
+.gridIperdetalle {
+	border: 0px;
+	margin: 0px;
+	border-collapse: collapse;
+}
+
+.pnlIperDetalle {
+	border-collapse: collapse;
+	padding: 0px;
+	border: none;
+}
+
+.ui-tooltip {
+	max-width: 300px;
+	background: rgb(255, 215, 0);
+	color: black !important;
+	radius: 5px
+}
+
+.labeldetalle {
+	font-weight: bolder;
+	color: rgb(75, 90, 120);
+}
+
+span.ui-outputlabel-rfi {
+	color: #DF0101;
+	font-size: 17px;
+}
+
+span.circulo {
+	border-radius: 0.8em;
+	-moz-border-radius: 0.8em;
+	-webkit-border-radius: 0.8em;
+	color: trasparent;
+	display: inline-block;
+	width: 1.2em;
+}
+
+.mapaleyenda td {
+	vertical-align: bottom;
+	margin: 0px;
+}
+
+.barraHerramientas {
+	width: 100%
+}
+
+.jqplot-xaxis-tick {
+	width: 0px !important;
+}
+
+.ui-state-disabled {
+	background: #deedf7 !important;
+	opacity: 1.0 !important;
+	color: #222222 !important;
+}
+
+.ui-state-disabled  .ui-selectonemenu-label {
+	background-color: #deedf7 !important;
+	opacity: 1.0 !important;
+	color: #222222 !important;
+}
+
+.columnaDisabled {
+	pointer-events: none;
+}
+
+#layout-header {
+	z-index: 1002 !important;
+}
+
+.slimmenu {
+	z-index: 1001 !important;
+}
+
+.ui-widget-content .panelInvisible {
+	padding: 0em 0em !important;
+	border: 0px none transparent !important;
+	background: transparent !important;
+}
+
+.panelInvisible .ui-panel {
+	padding: 0em 0em !important;
+	border: 0px none inherit !important;
+}
+
+.panelInvisible .ui-widget-content {
+	padding: 0em 0em !important;
+	border: 0px none inherit !important;
+}
+
+.panelInvisible .ui-panel-content {
+	padding: 0em 0em !important;
+	border: 0px none inherit !important;
+}
+
+.panelInvisible .ui-widget {
+	border: 0px none inherit !important;
+}
+
+.panelInvisible .ui-corner-all {
+	border: 0px none inherit !important;
+}
+
+.ui-inputfield {
+	margin: 0px;
+	outline: medium none;
+	font-weight: normal;
+	padding: 3px;
+}
+
+.titulosTablas {
+	color: #800000;
+}
+
+.columnGrid {
+	vertical-align: top !important;
+}
+
+.principalCabeceraEtiqueta {
+	border-bottom: 1px dotted #000000;
+	padding: 4px 0px;
+	text-align: right;
+	font-weight: bold;
+}
+
+.cabecera {
+	background-image: url("../imagenes/sistema/cabecera.png");
+	height: 30px;
+	vertical-align: middle;
+}
+
+#backlogin {
+	background: url("../imagenes/sistema/fondologin.png") no-repeat;
+	height: 650px;
+	width: 100% !important;
+}
+
+
+#backloginform {
+	background: url("../imagenes/sistema/fondoformlogin.png") no-repeat;
+	font-size: 14px;
+	height: 260px;
+	margin-left: 3%;
+	width: 350px;
+}
+
+#backloginsilueta {
+	background: url("../imagenes/sistema/loginsilueta1.png") no-repeat;
+	height: 300px;
+	margin-left: 17%;
+}
+
+#backloginfranja {
+	background: url("../imagenes/sistema/loginfranja1.png") no-repeat;
+	height: 300px;
+	margin-left: 9%;
+}
+
+#backloginform span {
+	color: rgb(17, 66, 92) !important;
+	font-family: Open sans;
+	font-weight: bolder;
+	margin-left: 30px;
+}
+
+.loginbtn {
+	background-color: rgb(18, 73, 105);
+	color: white;
+	float: right;
+	height: 30px;
+	margin-right: 43px;
+	margin-top: 15px;
+	width: 120px;
+}
+
+#labelsiga span {
+	color: rgb(17, 66, 92) !important;
+	font-family: Open sans;
+	font-size: 28px;
+	font-weight: bolder;
+	margin-left: 38px;
+}
+
+h1 {
+	
+}
+
+style ="text-decoration: underline ; color: #4669A9 ; font-family: Open sans,
+	Lucida Grande, Lucida Sans, Arial, sans-serif ;" .estiloTabla {
+	pointer-events: none;
+	background: rgba(128, 128, 128, 0.36) !important;
+}
+
+.controlCajaTextoHora {
+	background: rgb(150, 197, 235) !important;
+	color: #222222 !important;
+}
+
+.estiloSuspension {
+	width: 500px;
+	height: auto;
+	top: 254px;
+	z-index: 1003;
+	display: block;
+}
+
+.estiloArea {
+	overflow: hidden;
+	word-wrap: break-word;
+	height: 50px;
+	width: 400px;
+}
+
+.estiloFactores {
+	width: 700px;
+	height: auto;
+	top: 254px;
+	z-index: 1003;
+	display: block;
+}
+
+word-wrap
+
+
+:
+
+
+
+
+break-word
+
+
+;
+height
+
+
+:
+
+
+50
+px
+;
+
+
+
+
+width
+
+
+:
+
+
+400
+px
+;
+
+
+
+
+}
+.estiloSolicitudCapacitacion {
+	width: 600px;
+	height: auto;
+	top: 254px;
+	z-index: 1003;
+	display: block;
+}
+
+.contenedorPrincipalExtraChico {
+	margin-top: 5px;
+	margin-left: 5px;
+	width: 385px !important;
+}
+
+.aprobaricon {
+	background: url("../imagenes/mantenimiento/icoaprobacion.png") no-repeat
+		!important;
+	background-color: rgb(230, 240, 254) !important;
+	background-position: center !important;
+}
+
+.desaprobaricon {
+	background: url("../imagenes/mantenimiento/icodesaprobacion.png")
+		no-repeat !important;
+	background-color: rgb(230, 240, 254) !important;
+	background-position: center !important;
+}
+
+.blockUI {
+	z-index: 9998 !important;
+}
+
+.pe-blockui {
+	position: absolute;
+	overflow: hidden;
+	padding: 0;
+	-moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
+	-webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
+	z-index: 9999 !important;
+}
+
+.indverde {
+	background: transparent;
+	background-color: rgb(211, 248, 198);
+}
+
+.indrojo {
+	background: transparent;
+	background-color: rgb(248, 211, 198);
+}
+
+.pushy::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+	background-color: #0E994C;
+}
+
+.pushy::-webkit-scrollbar {
+	width: 5px;
+	background-color: #232323;
+}
+
+.pushy::-webkit-scrollbar-thumb {
+	background-color: #232323;
+	border: 2px solid #222222;
+}
+
+/* ESTILOS DEL MENU*/
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+.ui-state-highlight, .ui-widget-content .ui-state-highlight,
+	.ui-widget-header .ui-state-highlight {
+	border: 1px solid #C6D995 !important;
+	background: rgba(186, 239, 29, 0.64) !important;
+	color: #363636 !important;
+	font-weight: bold !important;
+}
+
+
+
+.oculto {
+	height: 0px !important;
+	display: none !important;
+}
+
+.ui-panelgrid .ui-panelgrid-cell {
+	border-width: 1px;
+	border-style: solid;
+	border-color: inherit;
+	padding: 3px 5px;
+}
+
+
+
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
+	background: #beeafa !important;
+	border: 1px solid #beeafa !important;
+}
+
+.ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default .ui-datatable-scrollable-header-box{
+	border: 1px solid #1093c7; 
+	background : #1093c7; 
+ 	font-weight: bold;
+	color:#ffffff; 
+} 
+
+.ui-widget-header{ 
+	background : #1093c7; 
+} 
+
+.ui-widget-content .ui-button {
+	border: 1px solid #144AA7;
+	background : #144AA7;
+	font-weight: bold;
+	color:#ffffff;
+}
+
+
+
+.ui-widget-content .ui-inputfield {
+	background : #ffffff;
+	font-weight: normal;
+	color:#000000;
+}
+
+.ui-state-disabled{
+	background: #b0e4f9!important;
+}
+
+.indicaciones{
+	font-size: 13px;
+	color: #2e6e9e;
+	font-weight: bolder;
+}

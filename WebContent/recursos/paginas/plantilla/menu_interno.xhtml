@@ -1,0 +1,47 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:pe="http://primefaces.org/ui/extensions">
+	<script type="text/javascript">
+		function accion(id) {
+			document.getElementById('frmMenu:' + id).click();
+		}
+	</script>
+
+	<h:form id="frmMenu">
+		<nav class="pushy pushy-left">
+			<header>
+				Web de bicicletas
+			</header>
+			<ul
+				style="font-size: 11px; font-family: Open sans, Arial, sans-serif;">
+
+				<li><a href="#" onclick="accion('btnInicio')"><img
+						width="18" style="margin-right: 10px"
+						src="#{request.contextPath}/recursos/imagenes/blue-home-icon.png" />
+						Inicio</a></li>
+
+				<li><a href="#" onclick="accion('btnSolicitudReparacion')"><img
+						width="18" style="margin-right: 12px"
+						src="#{request.contextPath}/recursos/imagenes/icono_reparacion.png" />
+						Solicitudes reparación</a></li>
+
+			</ul>
+		</nav>
+
+		<p:commandButton id="btnInicio" style="display:none"
+			action="bienvenida_interno" onstart="PF('bUI').block();"
+			oncomplete="PF('bUI').unblock();">
+		</p:commandButton>
+
+		<p:commandButton style="display:none" id="btnSolicitudReparacion"
+			action="#{solicitudReparacionBean.iniciarControladora}"
+			onstart="PF('bUI').block();" oncomplete="PF('bUI').unblock();">
+		</p:commandButton>
+
+	</h:form>
+
+</ui:composition>

@@ -1,0 +1,63 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:c="http://java.sun.com/jstl/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	template="/recursos/paginas/plantilla/master.xhtml">
+
+	<ui:define name="title">
+		<h2>Mantenimiento</h2>
+	</ui:define>
+
+	<ui:define name="content">
+		<h:form id="frmMantenimiento">
+
+			<p:panelGrid layout="grid" columns="2"
+				styleClass="ui-panelgrid-blank"
+				columnClasses="ui-grid-col-6,ui-grid-col-6">
+				<p:outputLabel value="DNI" />
+				<p:inputText value="#{pruebaBean.objPrueba.dni}" maxlength="8" />
+
+				<p:outputLabel value="Nombre" />
+				<p:inputText value="#{pruebaBean.objPrueba.nombre}" maxlength="100" />
+
+				<p:outputLabel value="Edad" />
+				<p:inputText value="#{pruebaBean.objPrueba.edad}" maxlength="3" />
+
+				<p:outputLabel value="Fecha de nacimiento" />
+				<p:calendar value="#{pruebaBean.objPrueba.fechanacimiento}"
+					pattern="dd/MM/yyyy" />
+
+				<p:outputLabel value="Sexo" />
+				<p:selectOneRadio value="#{pruebaBean.objPrueba.sexo}">
+					<f:selectItem itemValue="M" itemLabel="Masculino" />
+					<f:selectItem itemValue="F" itemLabel="Femenino" />
+				</p:selectOneRadio>
+
+			</p:panelGrid>
+
+			<p:panelGrid layout="grid" columns="7"
+				styleClass="ui-panelgrid-blank"
+				columnClasses="ui-grid-col-6,ui-grid-col-6">
+
+				<p:commandButton value="Guardar" styleClass="botonTextoImagen"
+					icon="nuevo" immediate="true" onstart="PF('bUI').block();"
+					oncomplete="PF('bUI').unblock();"
+					style="float: left; margin-top: 5px; margin-bottom: 5px;"
+					action="#{pruebaBean.guardar}" />
+
+				<p:commandButton value="Salir" styleClass="botonTextoImagen"
+					onstart="PF('bUI').block();" oncomplete="PF('bUI').unblock();"
+					icon="salir" action="#{pruebaBean.salir}"
+					style="float: right; margin-top: 5px; margin-bottom: 5px;" />
+
+			</p:panelGrid>
+
+
+		</h:form>
+
+
+	</ui:define>
+
+</ui:composition>

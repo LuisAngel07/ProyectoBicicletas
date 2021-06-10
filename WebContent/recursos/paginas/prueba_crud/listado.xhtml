@@ -1,0 +1,64 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:c="http://java.sun.com/jstl/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	template="/recursos/paginas/plantilla/master.xhtml">
+
+	<ui:define name="title">
+		<h2>Listado</h2>
+	</ui:define>
+
+	<ui:define name="content">
+		<h:form id="frmListado">
+
+			<p:panelGrid layout="grid" columns="7"
+				styleClass="ui-panelgrid-blank"
+				columnClasses="ui-grid-col-2,ui-grid-col-2,ui-grid-col-2,ui-grid-col-2,ui-grid-col-2,ui-grid-col-2,ui-grid-col-2">
+
+				<p:commandButton value="Nuevo" styleClass="botonTextoImagen"
+					icon="nuevo" immediate="true"
+					style="float: left; margin-top: 5px; margin-bottom: 5px;"
+					action="#{pruebaBean.nuevo}" />
+
+				<p:commandButton value="Buscar" styleClass="botonTextoImagen"
+					onstart="PF('bUI').block();" oncomplete="PF('bUI').unblock();"
+					icon="buscar" action="#{pruebaBean.buscar}"
+					style="float: right; margin-top: 5px; margin-bottom: 5px;"
+					update="tblListado" />
+
+			</p:panelGrid>
+
+			<p:dataTable emptyMessage="#{msg.generico_tabla_sinregistros}"
+				paginator="true" paginatorPosition="bottom" scrollHeight="300"
+				scrollable="true" reflow="true" id="tblListado"
+				value="#{pruebaBean.lstPrueba}" var="obj"
+				currentPageReportTemplate=" #{msg.registros_tablas} : {totalRecords} - #{msg.registros_pagina} : {currentPage} #{msg.de_tablas} {totalPages} "
+				paginatorTemplate=" {CurrentPageReport} {FirstPageLink} {PreviousPageLink}
+							           {PageLinks} {NextPageLink} {LastPageLink} ">
+
+				<p:column headerText="DNI" width="70">
+					<h:outputText value="#{obj.dni}" />
+				</p:column>
+				<p:column headerText="Nombre" width="70">
+					<h:outputText value="#{obj.nombre}" />
+				</p:column>
+				<p:column headerText="Edad" width="70">
+					<h:outputText value="#{obj.edad}" />
+				</p:column>
+				<p:column headerText="Fecha nacimiento" width="100"
+					styleClass="columnatablaCentro">
+					<h:outputText value="#{obj.fechanacimiento}">
+						<f:convertDateTime pattern="dd/MM/yyyy HH:mm" />
+					</h:outputText>
+				</p:column>
+
+			</p:dataTable>
+
+		</h:form>
+
+
+	</ui:define>
+
+</ui:composition>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd"
+	version="2.2">
+
+	<application>
+		<locale-config>
+			<default-locale>es</default-locale>
+			<supported-locale>es</supported-locale>
+		</locale-config>
+		<message-bundle>comun.messages</message-bundle>
+		<!-- <navigation-handler>net.royal.seguridad.vista.controladora.UGestorNavegacion</navigation-handler> -->
+	</application>
+	<!-- <lifecycle> <phase-listener>net.royal.framework.web.controladora.UBasePhaseListener</phase-listener> 
+		</lifecycle> -->
+	<!-- <factory> <exception-handler-factory>net.royal.framework.web.controladora.UExceptionHandlerFactory</exception-handler-factory> 
+		</factory> -->
+
+	<!-- reglas de navegacion -->
+	<navigation-rule>
+		<from-view-id>*</from-view-id>
+		<navigation-case>
+			<from-outcome>prueba_listado</from-outcome>
+			<to-view-id>/recursos/paginas/prueba_crud/listado.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>prueba_mantenimiento</from-outcome>
+			<to-view-id>/recursos/paginas/prueba_crud/mantenimiento.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>login</from-outcome>
+			<to-view-id>/recursos/paginas/login/login.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>bienvenida</from-outcome>
+			<to-view-id>/recursos/paginas/plantilla/bienvenida.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+		
+			<navigation-case>
+			<from-outcome>bienvenida_interno</from-outcome>
+			<to-view-id>/recursos/paginas/plantilla/bienvenida_interno.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>diagnosticar</from-outcome>
+			<to-view-id>/recursos/paginas/registrodiagnostico/diagnosticar.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>solicitudReparacion</from-outcome>
+			<to-view-id>/recursos/paginas/solicitudReparacion/solicitudreparacion.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+		
+		<navigation-case>
+			<from-outcome>solicitudReparacionListado</from-outcome>
+			<to-view-id>/recursos/paginas/solicitudReparacion/solicitudreparacion_listado.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+
+	</navigation-rule>
+
+</faces-config>

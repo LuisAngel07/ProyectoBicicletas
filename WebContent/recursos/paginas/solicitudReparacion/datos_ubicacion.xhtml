@@ -1,0 +1,56 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pe="http://primefaces.org/ui/extensions">
+	<p:panelGrid columns="2" layout="grid" styleClass="ui-panelgrid-blank"
+		columnClasses="ui-grid-col-6,ui-grid-col-4">
+		<p:panelGrid columns="1" layout="grid" styleClass="ui-panelgrid-blank"
+			columnClasses="ui-grid-col-12">
+			<p:gmap center="-12.0462136,-77.0326808" zoom="15" type="ROADMAP"
+				style="width:600px;height:400px" />
+
+		</p:panelGrid>
+
+		<p:panelGrid columns="2" layout="grid" styleClass="ui-panelgrid-blank"
+			columnClasses="ui-grid-col-3,ui-grid-col-8">
+			<p:outputLabel value="Departamento" />
+			<p:selectOneMenu disabled="true" filter="true"
+				filterMatchMode="contains" id="cboDepartamento"
+				valueChangeListener="#{solicitudReparacionBean.valueChangeDepartamento}">
+				<f:selectItem itemLabel="--Seleccione--" />
+				<p:ajax update="cboProvincia,cboDistrito" />
+			</p:selectOneMenu>
+			<p:outputLabel value="Provincia" />
+			<p:selectOneMenu id="cboProvincia" filter="true"
+				filterMatchMode="contains"
+				disabled="#{solicitudReparacionBean.accionPantalla.toString() == 'VER'}"
+				valueChangeListener="#{solicitudReparacionBean.valueChangeProvincia}">
+				<f:selectItem itemLabel="--Seleccione--" />
+				<p:ajax update="cboDistrito" />
+			</p:selectOneMenu>
+			<p:outputLabel value="Distrito" />
+			<p:selectOneMenu id="cboDistrito" filter="true"
+				filterMatchMode="contains"
+				disabled="#{solicitudReparacionBean.accionPantalla.toString() == 'VER'}">
+				<f:selectItem itemLabel="--Seleccione--" />
+			</p:selectOneMenu>
+			<p:outputLabel value="Dirección" />
+			<p:inputTextarea id="txtDireccion"
+				disabled="#{solicitudReparacionBean.accionPantalla.toString() == 'VER'}"/>
+
+		</p:panelGrid>
+
+	</p:panelGrid>
+
+	<p:panelGrid columns="2" layout="grid" styleClass="ui-panelgrid-blank"
+		columnClasses="ui-grid-col-2,ui-grid-col-2"
+		rendered="#{solicitudReparacionBean.accionPantalla.toString() != 'VER'}">
+		<p:commandButton value="Atrás" process="@this"
+			action="#{solicitudReparacionBean.paso1}" />
+		<p:commandButton value="Siguiente"
+			process="@this,cboDepartamento,cboProvincia,cboDistrito,txtDireccion"
+			action="#{solicitudReparacionBean.paso3}" />
+	</p:panelGrid>
+</ui:composition>

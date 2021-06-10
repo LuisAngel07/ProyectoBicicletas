@@ -1,0 +1,86 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:c="http://java.sun.com/jstl/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	template="/recursos/paginas/plantilla/master.xhtml">
+
+	<ui:define name="title">
+		<p:panelGrid layout="grid" columns="1" styleClass="ui-panelgrid-blank"
+			columnClasses="ui-grid-col-12">
+			<h2>Diagnóstico de bicicletas</h2>
+		</p:panelGrid>
+
+	</ui:define>
+
+	<ui:define name="content">
+		<h:form id="frmDiagnosticar">
+
+			<p:growl life="4000" />
+
+			<p:remoteCommand autoRun="false" immediate="true"
+				rendered="#{clienteBean.mostrarCliente}"
+				action="#{clienteBean.iniciarControladora}">
+				<f:setPropertyActionListener target="#{clienteBean.bean}"
+					value="#{buscarDiagnosticoBean}" />
+			</p:remoteCommand>
+
+			<p:panelGrid layout="grid" columns="3"
+				styleClass="ui-panelgrid-blank"
+				columnClasses="ui-grid-col-2,ui-grid-col-7,ui-grid-col-2">
+				<p:outputLabel value="Describir la avería o problema" />
+				<p:inputTextarea required="true"
+					requiredMessage="Debe ingresar la avería o problema"
+					value="#{buscarDiagnosticoBean.filtroDto.descripcion}" />
+				<p:commandButton value="Generar diagnóstico"
+					action="#{buscarDiagnosticoBean.buscar}" update="@form" />
+			</p:panelGrid>
+
+
+			<p:panelGrid id="pnlDiagnosticos" layout="grid" columns="1"
+				styleClass="ui-panelgrid-blank" columnClasses="ui-grid-col-12">
+
+
+				<p:outputLabel value="Diagnóstico encontrado"
+					rendered="#{buscarDiagnosticoBean.verDiagnostico}"
+					style="font-weight:bold !important; font-size:14px !important" />
+
+				<p:accordionPanel
+					rendered="#{buscarDiagnosticoBean.verDiagnostico}">
+					<p:tab
+						title="#{buscarDiagnosticoBean.diagnosticoDto.descripcion}">
+						<pre>
+							<h:outputText escape="false" styleClass="indicaciones"
+								value="#{buscarDiagnosticoBean.diagnosticoDto.indicacioneshtml}" />
+						</pre>
+					</p:tab>
+				</p:accordionPanel>
+
+				<p:outputLabel value="Otras Recomendaciones a considerar"
+					rendered="#{buscarDiagnosticoBean.verDiagnostico}"
+					style="font-weight:bold !important; font-size:14px !important" />
+
+				<p:accordionPanel>
+
+					<c:forEach var="diag"
+						items="#{buscarDiagnosticoBean.lstDiagnostico}">
+
+						<p:tab title="#{diag.descripcion}">
+							<pre>
+								<h:outputText escape="false" styleClass="indicaciones"
+									value="#{diag.indicacioneshtml}" />
+							</pre>
+						</p:tab>
+
+					</c:forEach>
+				</p:accordionPanel>
+
+			</p:panelGrid>
+
+		</h:form>
+
+
+	</ui:define>
+
+</ui:composition>

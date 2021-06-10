@@ -1,0 +1,97 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.cabeceraBienvenida {
+	background: url("../imagenes/sistema/cabeceraBienvenida.png") no-repeat ;
+	height: 114px;
+	width:100%;
+	vertical-align: middle;
+}
+
+body {
+	/* background: #283962; */
+	background: #f9feff;
+	color: #FFF;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+}
+
+a {
+	color: #FFF;
+	text-decoration: none;
+}
+
+.menu {
+	width: 300px;
+	margin-left: 16%;
+	margin-top: 8%;
+	opacity: 1;
+	font-size: 12pt !important;
+}
+
+.menu a {
+	width: 280px;
+	height: 160px;
+	line-height: 50px;
+	display: block;
+	margin-bottom: 10%;
+	text-align: center;
+	float: left;
+}
+
+@media only screen and (max-width: 940px) {
+	.menu  {
+		width: 99%;
+		margin: auto auto;
+	}
+}
+
+@media only screen and (max-width: 620px) {
+	.menu a {
+		width: 95%;
+		margin-bottom: 1px;
+	}
+}
+
+.yellow {
+	background: #40c99a;
+	font-size: 13px
+}
+
+.blue {
+	background: #144AA7;
+	font-size: 13px
+}
+
+.purple {
+	background: #1093c7;
+	font-size: 13px
+}
+
+.greenmiddle{
+	background: #24c7bc;
+	font-size: 13px
+}
+
+/*.orange {
+	background: #ee7202;
+	font-size: 13px
+}*/
+
+/*.pink {
+	background: #e61c67;
+	font-size: 13px
+}
+*/
+
+.green {
+	background: #8dcc3b;
+	font-size: 13px
+}
+
+/*.red {
+	background: #FF0000;
+	font-size: 13px
+}*/

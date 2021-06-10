@@ -1,0 +1,100 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:c="http://java.sun.com/jstl/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	template="/recursos/paginas/plantilla/master_interno.xhtml">
+
+	<ui:define name="title">
+		<p:panelGrid layout="grid" columns="1" styleClass="ui-panelgrid-blank"
+			columnClasses="ui-grid-col-12">
+			<h2>Bandeja de solicitudes de reparación</h2>
+		</p:panelGrid>
+
+	</ui:define>
+
+	<ui:define name="content">
+		<h:form id="frmSolicitudReparacionListado">
+
+			<p:dataTable emptyMessage="No se encontraron registros"
+				paginator="true" paginatorPosition="bottom" scrollHeight="300"
+				scrollable="true" reflow="true" id="tblListado" rows="10"
+				rowIndexVar="rowIndex" var="obj"
+				currentPageReportTemplate=" Registros : {totalRecords} - Página : {currentPage} de {totalPages} "
+				paginatorTemplate=" {CurrentPageReport} {FirstPageLink} {PreviousPageLink}
+							           {PageLinks} {NextPageLink} {LastPageLink} ">
+
+				<p:column headerText="Sec." width="10"
+					styleClass="columnatablaCentro">
+					<h:outputText value="#{rowIndex + 1}" />
+				</p:column>
+				<p:column headerText="Cliente" width="100">
+					<h:outputText value="#{obj.cliente}" />
+				</p:column>
+				<p:column headerText="Dirección" width="150">
+					<h:outputText value="#{obj.direccion}" />
+				</p:column>
+				<p:column headerText="Fecha solicitud" width="40"
+					styleClass="columnatablaCentro">
+					<h:outputText value="#{obj.fechasolicitud}">
+						<f:convertDateTime pattern="dd/MM/yyyy HH:mm" />
+					</h:outputText>
+				</p:column>
+				<p:column headerText="Estado" width="60"
+					styleClass="columnatablaCentro">
+					<h:outputText value="Pendiente" rendered="#{obj.estado == 'P'}" />
+					<h:outputText value="Atendido" rendered="#{obj.estado == 'A'}" />
+					<h:outputText value="Observado" rendered="#{obj.estado == 'O'}" />
+				</p:column>
+				<p:column headerText="Det. avería" width="40">
+					<p:panelGrid layout="grid" columns="2"
+						styleClass="ui-panelgrid-blank" columnClasses="ui-grid-col-12">
+						<p:commandButton icon="ver" title="Ver detalle"
+							styleClass="botonTextoImagenChico"
+							action="#{solicitudReparacionBean.ver}">
+						</p:commandButton>
+					</p:panelGrid>
+				</p:column>
+
+				<p:column headerText="Acción" width="40">
+					<p:panelGrid layout="grid" columns="1"
+						styleClass="ui-panelgrid-blank" columnClasses="ui-grid-col-12">
+						<p:commandButton icon="aceptar" title="Atender"
+						
+							styleClass="botonTextoImagenChico" rendered="#{obj.estado=='P'}">
+						</p:commandButton>
+					</p:panelGrid>
+				</p:column>
+			</p:dataTable>
+
+		</h:form>
+
+		<p:dialog widgetVar="popSolicitudReparaionDet"
+			id="dgSolicitudReparaionDet"
+			styleClass="contenedorPrincipalExtraGrande3" modal="true"
+			header="Detalle de la solicitud de reparación" appendTo="@(body)">
+			<div class="ui-fluid">
+				<h:form id="frmSolicitudReparacionDet">
+
+					<p:tabView>
+						<p:tab title="Datos de la bicicleta" titleStyle="font-size:15px">
+							<ui:include src="datos_bicicleta.xhtml" />
+						</p:tab>
+						<p:tab title="Ubicación" titleStyle="font-size:15px">
+							<ui:include src="datos_ubicacion.xhtml" />
+						</p:tab>
+						<p:tab title="Datos del técnico" titleStyle="font-size:15px">
+							<ui:include src="datos_tecnico.xhtml" />
+						</p:tab>
+
+					</p:tabView>
+
+				</h:form>
+			</div>
+		</p:dialog>
+
+
+	</ui:define>
+
+</ui:composition>

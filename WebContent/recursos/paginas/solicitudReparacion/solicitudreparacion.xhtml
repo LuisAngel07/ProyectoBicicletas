@@ -1,0 +1,65 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:c="http://java.sun.com/jstl/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	template="/recursos/paginas/plantilla/master.xhtml">
+
+	<ui:define name="title">
+		<p:panelGrid layout="grid" columns="1" styleClass="ui-panelgrid-blank"
+			columnClasses="ui-grid-col-12">
+			<h2>Solicitar reparación</h2>
+		</p:panelGrid>
+
+	</ui:define>
+
+	<ui:define name="content">
+		<h:form id="frmSolicitudReparacion" enctype="multipart/form-data">
+
+			<p:remoteCommand autoRun="true"
+				rendered="#{clienteBean.mostrarCliente}" immediate="true"
+				action="#{clienteBean.iniciarControladora}">
+				<f:setPropertyActionListener target="#{clienteBean.bean}"
+					value="#{solicitudReparacionBean}" />
+			</p:remoteCommand>
+
+			<p:tabView activeIndex="#{solicitudReparacionBean.tabactive}"
+				id="tvReparacion" dynamic="true">
+				<p:tab title="Paso 1: Datos de la bicicleta"
+					titleStyle="font-size:15px">
+					<ui:include src="datos_bicicleta.xhtml" />
+				</p:tab>
+				<p:tab title="Paso 2: Ubicación" titleStyle="font-size:15px">
+					<ui:include src="datos_ubicacion.xhtml" />
+				</p:tab>
+				<p:tab title="Paso 3: Datos del técnico" titleStyle="font-size:15px">
+					<ui:include src="datos_tecnico.xhtml" />
+				</p:tab>
+
+			</p:tabView>
+
+
+
+		</h:form>
+
+		<p:confirmDialog id="dgConfirmacion" closable="false"
+			widgetVar="popConfirmacion" header="Confirmación de solicitud"
+			resizable="false" severity="info" appendTo="@(body)"
+			message="Su solicitud ha sido generada correctamente, lo mantendremos informado"
+			responsive="true">
+			<div class="ui-fluid">
+				<h:form>
+					<p:panelGrid columns="1" style="border-spacing:0px;"
+						columnClasses="ui-grid-col-4" layout="grid"
+						styleClass="ui-panelgrid-blank">
+						<p:commandButton value="Salir" action="bienvenida" />
+					</p:panelGrid>
+				</h:form>
+			</div>
+		</p:confirmDialog>
+
+
+	</ui:define>
+
+</ui:composition>

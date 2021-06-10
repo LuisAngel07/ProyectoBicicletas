@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<meta charset="utf-8" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<title>Sistema de bicicletas</title>
+
+	<link type="text/css"
+		href="#{request.contextPath}/recursos/estilos/estilosMenuWindows.css"
+		rel="stylesheet" />
+	<link rel="stylesheet" type="text/css"
+		href="#{request.contextPath}/recursos/estilos/estilos.css" />
+	<link rel="stylesheet" type="text/css"
+		href="#{request.contextPath}/recursos/estilos/default.css" />
+	<script type="text/javascript"
+		src="#{request.contextPath}/recursos/js/validaciones.js"></script>
+
+
+
+	<script type="text/javascript">
+		function accion(id) {
+			document.getElementById('frmBienvenida:' + id + '').click();
+		}
+	</script>
+
+</h:head>
+
+<h:body>
+
+	<h:form id="frmBienvenida">
+
+
+		<center>
+			<p:panelGrid columns="3" layout="grid"
+				columnClasses="ui-grid-col-9,ui-grid-col-2,ui-grid-col-1"
+				styleClass="ui-panelgrid-blank">
+
+				<p:outputLabel value="SISTEMA DE SERVICIO TÉCNICO DE BICICLETAS"
+					style="font-size:18px !important;" />
+				<p:outputLabel
+					value="Bienvenido: ${sessionDto.personaDto.nombrecompleto}"
+					style="text-transform:uppercase;" />
+
+				<p:commandLink style="color: #2e6e9e; float:right" value="Salir"
+					action="login">
+				</p:commandLink>
+			</p:panelGrid>
+		</center>
+
+		<p:separator />
+
+		<div class="menu">
+			<a class="purple" href="#" onclick="accion('btnSolicitudReparacion')">Bandeja
+				de solicitudes de reparación<br></br> <img width="70"
+				src="#{request.contextPath}/recursos/imagenes/icono_reparacion.png" />
+			</a>
+		</div>
+
+		<p:commandButton style="display:none" id="btnSolicitudReparacion"
+			action="#{solicitudReparacionBean.iniciarControladora}"
+			onstart="PF('bUI').block();" oncomplete="PF('bUI').unblock();">
+		</p:commandButton>
+
+	</h:form>
+
+
+
+</h:body>
+
+</html>
+
+
+
+

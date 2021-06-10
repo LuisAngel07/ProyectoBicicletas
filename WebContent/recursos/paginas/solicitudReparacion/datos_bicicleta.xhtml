@@ -1,0 +1,149 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pe="http://primefaces.org/ui/extensions">
+	<p:panelGrid columns="2" layout="grid" styleClass="ui-panelgrid-blank"
+		columnClasses="ui-grid-col-1,ui-grid-col-4" id="grdDtos"
+		rendered="#{solicitudReparacionBean.accionPantalla.toString() != 'VER'}">
+
+		<p:outputLabel value="Marca"></p:outputLabel>
+		<p:selectOneMenu required="true"
+			requiredMessage="Debe seleccionar la marca">
+			<f:selectItem itemLabel="--Seleccione--" />
+		</p:selectOneMenu>
+
+		<p:outputLabel value="Modelo"></p:outputLabel>
+		<p:selectOneMenu required="true"
+			requiredMessage="Debe seleccionar el modelo">
+			<f:selectItem itemLabel="--Seleccione--" />
+		</p:selectOneMenu>
+
+		<p:outputLabel value="Descripción del problema"></p:outputLabel>
+		<p:inputTextarea required="true"
+			requiredMessage="Debe ingresar el problema"/>
+
+		<p:outputLabel value="Foto de la bicicleta"></p:outputLabel>
+		<p:fileUpload required="true"
+			fileUploadListener="#{solicitudReparacionBean.handleFileUpload}"
+			requiredMessage="Seleccione un Archivo" label="Seleccione un archivo"
+			auto="true" showButtons="false" sizeLimit="2000000"
+			invalidFileMessage="archivo inválido" update="lblArchivo"
+			invalidSizeMessage="se excedió el límite de tamaño"
+			uploadLabel="Cargando" rendered="true" mode="advanced" />
+
+		<p:outputLabel value="Archivo seleccionado:"></p:outputLabel>
+		<p:outputLabel id="lblArchivo"></p:outputLabel>
+
+	</p:panelGrid>
+
+	<p:panelGrid columns="1" layout="grid" styleClass="ui-panelgrid-blank"
+		columnClasses="ui-grid-col-2"
+		rendered="#{solicitudReparacionBean.accionPantalla.toString() != 'VER'}">
+		<p:commandButton value="Agregar Item" update="@form" />
+	</p:panelGrid>
+	
+	<p:separator/>
+
+	<p:panelGrid columns="1" layout="grid" styleClass="ui-panelgrid-blank"
+		columnClasses="ui-grid-col-12">
+		<p:dataTable emptyMessage="#{msg.generico_tabla_sinregistros}"
+			paginator="true" paginatorPosition="bottom" scrollable="true"
+			reflow="true" id="tblItems" rows="5" rowIndexVar="rowIndex"  var="obj"
+			currentPageReportTemplate=" Registros : {totalRecords} - Página : {currentPage} de {totalPages} "
+			paginatorTemplate=" {CurrentPageReport} {FirstPageLink} {PreviousPageLink}
+							           {PageLinks} {NextPageLink} {LastPageLink} ">
+
+			<p:column headerText="Sec." width="10"
+				styleClass="columnatablaCentro">
+				<h:outputText value="#{rowIndex + 1}" />
+			</p:column>
+			<p:column headerText="Marca" width="100">
+				<h:outputText value="#{obj.marcanombre}"
+					rendered="#{!solicitudReparacionBean.blEditarItem}" />
+				<p:selectOneMenu rendered="#{solicitudReparacionBean.blEditarItem}"
+					value="#{obj.idmarca}" required="true"
+					requiredMessage="Debe seleccionar la marca">
+					<f:selectItem itemLabel="--Seleccione--" />
+					<f:selectItems itemValue="#{marca.id}" itemLabel="#{marca.nombre}"
+						var="marca" value="#{solicitudReparacionBean.lstMarca}" />
+				</p:selectOneMenu>
+			</p:column>
+			<p:column headerText="Modelo" width="150">
+				<h:outputText value="#{obj.modelonombre}"
+					rendered="#{!solicitudReparacionBean.blEditarItem}" />
+				<p:selectOneMenu rendered="#{solicitudReparacionBean.blEditarItem}"
+					value="#{obj.idmodelo}" required="true"
+					requiredMessage="Debe seleccionar el modelo">
+					<f:selectItem itemLabel="--Seleccione--" />
+					<f:selectItems itemValue="#{modelo.id}"
+						itemLabel="#{modelo.nombre}" var="modelo"
+						value="#{solicitudReparacionBean.lstModelo}" />
+				</p:selectOneMenu>
+			</p:column>
+			<p:column headerText="Descripción" width="150">
+				<h:outputText value="#{obj.descripcion}"
+					rendered="#{!solicitudReparacionBean.blEditarItem}" />
+				<p:inputTextarea value="#{obj.descripcion}" required="true"
+					requiredMessage="Debe ingresar la descripción"
+					rendered="#{solicitudReparacionBean.blEditarItem}" />
+			</p:column>
+			<p:column headerText="Archivo" width="150">
+				<p:fileUpload required="true"
+					rendered="#{solicitudReparacionBean.blEditarItem}"
+					fileUploadListener="#{solicitudReparacionBean.handleFileUploadReparacionItem}"
+					requiredMessage="Seleccione un Archivo"
+					label="Seleccione un archivo" auto="true" showButtons="false"
+					sizeLimit="2000000" invalidFileMessage="archivo inválido"
+					invalidSizeMessage="se excedió el límite de tamaño"
+					uploadLabel="Cargando" mode="advanced" />
+
+				<h:commandLink title="Ver archivo" target="_blank" immediate="true"
+					action="#{solicitudReparacionBean.descargar}"
+					value="#{obj.archivonombre}">
+					<f:setPropertyActionListener
+						target="#{solicitudReparacionBean.opcionDescarga}"
+						value="REPARACION_ITEM" />
+				</h:commandLink>
+			</p:column>
+			<p:column headerText="Acciones" width="60">
+				<p:panelGrid layout="grid" columns="1"
+					styleClass="ui-panelgrid-blank" columnClasses="ui-grid-col-12"
+					rendered="#{solicitudReparacionBean.accionPantalla.toString() != 'VER'}">
+					<p:commandLink title="Editar" immediate="true" update="tblItems"
+						rendered="#{!solicitudReparacionBean.blEditarItem}"
+						action="#{solicitudReparacionBean.editarItem}" value="Editar">
+					</p:commandLink>
+					<p:commandLink title="Eliminar" immediate="true" update="tblItems"
+						rendered="#{!solicitudReparacionBean.blEditarItem}"
+						action="#{solicitudReparacionBean.eliminarItem}" value="Eliminar">
+					</p:commandLink>
+					<p:commandLink title="Actualizar" update="tblItems"
+						rendered="#{solicitudReparacionBean.blEditarItem}"
+						action="#{solicitudReparacionBean.actualizarItem}"
+						value="Actualizar" process="tblItems">
+						<f:setPropertyActionListener
+							target="#{solicitudReparacionBean.blEditarItem}" value="false" />
+					</p:commandLink>
+					<p:commandLink title="Cancelar" update="tblItems" immediate="true"
+						rendered="#{solicitudReparacionBean.blEditarItem}"
+						value="Cancelar" process="tblItems">
+						<f:setPropertyActionListener
+							target="#{solicitudReparacionBean.blEditarItem}" value="false" />
+					</p:commandLink>
+				</p:panelGrid>
+			</p:column>
+
+		</p:dataTable>
+	</p:panelGrid>
+
+	<p:panelGrid columns="1" layout="grid" styleClass="ui-panelgrid-blank"
+		columnClasses="ui-grid-col-2"
+		rendered="#{solicitudReparacionBean.accionPantalla.toString() != 'VER'}">
+		<p:commandButton value="Siguiente" process="@this"
+			action="#{solicitudReparacionBean.paso2}" />
+	</p:panelGrid>
+
+
+</ui:composition>

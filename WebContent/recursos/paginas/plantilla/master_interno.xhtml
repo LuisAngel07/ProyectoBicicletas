@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pe="http://primefaces.org/ui/extensions">
+
+<f:view contentType="text/html" encoding="UTF-8">
+	<h:head>
+		<f:facet name="first">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+			<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+			<meta name="viewport"
+				content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+			<meta name="apple-mobile-web-app-capable" content="yes" />
+			<meta http-equiv="Cache-Control" content="no-cache" />
+			<meta http-equiv="Pragma" content="no-cache" />
+			<title>Framework App</title>
+
+
+			<link rel="stylesheet" type="text/css"
+				href="#{request.contextPath}/recursos/estilos/estilos.css" />
+
+			<script type="text/javascript"
+				src="#{request.contextPath}/recursos/js/validaciones.js"></script>
+
+			<link type="text/css" rel="stylesheet"
+				href="#{request.contextPath}/recursos/estilos/pushy.css" />
+
+			<link rel="stylesheet" type="text/css"
+				href="#{request.contextPath}/recursos/estilos/default.css" />
+
+			<link rel="stylesheet" type="text/css"
+				href="#{request.contextPath}/recursos/estilos/iconos.css" />
+
+			<script type='text/javascript'
+				src='https://maps.googleapis.com/maps/api/js?key=AIzaSyA79lj8iIP71vAShqM-oz-C7RtobxGhqtQ'></script>
+
+
+		</f:facet>
+	</h:head>
+
+	<h:body>
+		<ui:include src="menu_interno.xhtml" />
+
+		<div class="site-overlay"></div>
+
+		<pe:layout fullPage="true">
+			<pe:layoutPane position="north" resizable="false">
+				<ui:include src="cabecera_interno.xhtml" />
+			</pe:layoutPane>
+
+			<pe:layoutPane position="center">
+				<div class="ui-fluid">
+					<ui:insert name="title" />
+					<ui:insert name="content" />
+					<p:confirmDialog global="true" showEffect="size" hideEffect="size"
+						responsive="true" styleClass="contenedorPrincipalExtraChico0">
+						<p:commandButton value="#{msg.generico_Si}" type="button"
+							styleClass="ui-confirmdialog-yes botonTextoImagen" icon="aceptar" />
+						<p:commandButton value="#{msg.generico_no}" type="button"
+							styleClass="ui-confirmdialog-no botonTextoImagen" icon="cancelar" />
+					</p:confirmDialog>
+					<p:dialog widgetVar="popTimeOut" header="Sesión Expirada"
+						responsive="true" appendTo="@(body)" modal="true" closable="false"
+						resizable="false">
+						<h:form>
+							<h:panelGrid columns="1">
+								<p:outputLabel
+									value="La Sesión ha expirado. Debe ingresar Nuevamente a la Aplicación." />
+								<h:commandButton value="Aceptar" action="pantallaLogin"
+									immediate="true" />
+							</h:panelGrid>
+						</h:form>
+					</p:dialog>
+
+				</div>
+			</pe:layoutPane>
+
+			<!-- 	<pe:blockUI target="@(body)" widgetVar="bUI">
+				<h:graphicImage value="/comun/recursos/imagenes/loading.gif"
+					style="vertical-align: middle;width:15em;" />
+			</pe:blockUI> -->
+
+			<pe:tooltip global="true" />
+
+		</pe:layout>
+
+		<!-- <p:idleMonitor timeout="#{cBindingController.timeout}"
+			onidle="PF('popTimeOut').show()">
+		</p:idleMonitor> -->
+
+
+
+		<script type="text/javascript"
+			src="#{request.contextPath}/recursos/js/pushy.min.js"></script>
+
+		<h:outputScript library="primefaces" name="jquery/jquery.js" />
+
+	</h:body>
+
+</f:view>
+</html>
+

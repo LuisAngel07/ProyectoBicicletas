@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<f:view contentType="text/html" encoding="windows-1252" locale="es">
+	<h:head>
+		<meta charset="utf-8" />
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+		<title>#{cComunGlobal.nombreAplicacion}</title>
+		<link rel="stylesheet" type="text/css"
+			href="#{request.contextPath}/recursos/estilos/login.css" />
+
+		
+
+	</h:head>
+
+	<h:body>
+		<p:growl showDetail="true" showSummary="false" life="4000"
+			autoUpdate="true" />
+		<header> </header>
+		<center>
+			<p:outputLabel style="font-size:20px!important"
+				value="SISTEMA DE SERVICIO TÉCNICO DE BICICLETAS" />
+		</center>
+
+		<section>
+			<div id="form-main">
+				<div id="form-div">
+					<h:form>
+						<p:focus for="txtusuario" />
+						<span>Nombre de Usuario</span>
+						<h:inputText value="#{loginBean.usuario}" immediate="true"
+							required="true" requiredMessage="Debe Ingresar el Usuario"
+							styleClass="feedback-input" id="txtusuario" />
+
+						<span>Contraseña</span>
+						<h:inputSecret value="#{loginBean.clave}" redisplay="false"
+							immediate="true" styleClass="feedback-input" />
+
+						<h:commandButton styleClass="button-blue" value="Ingresar"
+							action="#{loginBean.ingresar}" />
+
+						<p:spacer />
+
+						<center>
+							<p:commandLink immediate="true"
+								style="color: #2e6e9e; font-size:13px!important; " value="Salir"
+								action="bienvenida">
+							</p:commandLink>
+						</center>
+					</h:form>
+				</div>
+				<div class="aplicacion">#{cComunGlobal.nombreAplicacion}</div>
+			</div>
+		</section>
+
+		<footer>
+
+
+			<div class='define'>
+				<p style="font-size: xx-small;"></p>
+			</div>
+		</footer>
+	</h:body>
+
+</f:view>
+</html>
+

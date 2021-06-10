@@ -1,0 +1,30 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pe="http://primefaces.org/ui/extensions">
+	<div class="ui-fluid">
+		<h:form id="frmCabecera">
+
+			<INPUT type="button" id="lblMenu" class="menu-btn"
+				style="background-color: transparent; border: none; float: left;"
+				value="Menú" />
+			<p:commandLink style="color: #2e6e9e; float:right; margin-right:20px"
+				value="Salir" action="login">
+			</p:commandLink>
+			<p:outputLabel
+				value="Bienvenido: ${sessionDto.personaDto.nombrecompleto}"
+				style="color: #2e6e9e; float:right; margin-right:20px; text-transform:uppercase;" />
+
+			<center>
+				<h:outputText value="SISTEMA DE SERVICIO TÉCNICO DE BICICLETAS"
+					style="font-size:18px !important; " />
+			</center>
+
+			<p:separator />
+		</h:form>
+
+
+	</div>
+</ui:composition>
