@@ -3,11 +3,14 @@ package com.desarrollo.servicio;
 import java.sql.SQLException;
 import java.util.List;
 
+import com.desarrollo.dominio.ReparacionDto;
 import com.desarrollo.dominio.TecnicoDto;
 
 public interface TecnicoServicio {
 
 	public List<TecnicoDto> listar(TecnicoDto prmLis) throws SQLException;
+
+	public TecnicoDto obtenerParaReparacion(ReparacionDto reparacionDto) throws Exception;
 
 	public TecnicoDto ver(Integer id) throws SQLException;
 

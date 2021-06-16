@@ -8,11 +8,12 @@ import javax.faces.bean.SessionScoped;
 
 import com.desarrollo.bean.base.BaseBean;
 import com.desarrollo.dominio.DiagnosticoDto;
+import com.desarrollo.framework.controller.MensajeControllerGenerico;
 import com.desarrollo.framework.interfaces.IMantenimientoController;
 
 @ManagedBean
 @SessionScoped
-public class BuscarDiagnosticoBean extends BaseBean implements IMantenimientoController {
+public class RegistroDiagnosticoBean extends BaseBean implements IMantenimientoController {
 
 	private DiagnosticoDto diagnosticoDto;
 	private DiagnosticoDto filtroDto;
@@ -109,7 +110,11 @@ public class BuscarDiagnosticoBean extends BaseBean implements IMantenimientoCon
 		return null;
 	}
 
-
+	@Override
+	public String mensaje(MensajeControllerGenerico mensajeControllerGenerico) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 	@Override
 	public String inicializarFiltrosListado() throws Exception {

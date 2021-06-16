@@ -19,11 +19,11 @@
 
 			<p:growl life="4000" />
 
-			<p:remoteCommand autoRun="false" immediate="true"
+			<p:remoteCommand autoRun="true" immediate="true"
 				rendered="#{clienteBean.mostrarCliente}"
 				action="#{clienteBean.iniciarControladora}">
 				<f:setPropertyActionListener target="#{clienteBean.bean}"
-					value="#{buscarDiagnosticoBean}" />
+					value="#{registroDiagnosticoBean}" />
 			</p:remoteCommand>
 
 			<p:panelGrid layout="grid" columns="3"
@@ -32,9 +32,9 @@
 				<p:outputLabel value="Describir la avería o problema" />
 				<p:inputTextarea required="true"
 					requiredMessage="Debe ingresar la avería o problema"
-					value="#{buscarDiagnosticoBean.filtroDto.descripcion}" />
+					value="#{registroDiagnosticoBean.filtroDto.descripcion}" />
 				<p:commandButton value="Generar diagnóstico"
-					action="#{buscarDiagnosticoBean.buscar}" update="@form" />
+					action="#{registroDiagnosticoBean.buscar}" update="@form" />
 			</p:panelGrid>
 
 
@@ -43,28 +43,28 @@
 
 
 				<p:outputLabel value="Diagnóstico encontrado"
-					rendered="#{buscarDiagnosticoBean.verDiagnostico}"
+					rendered="#{registroDiagnosticoBean.verDiagnostico}"
 					style="font-weight:bold !important; font-size:14px !important" />
 
 				<p:accordionPanel
-					rendered="#{buscarDiagnosticoBean.verDiagnostico}">
+					rendered="#{registroDiagnosticoBean.verDiagnostico}">
 					<p:tab
-						title="#{buscarDiagnosticoBean.diagnosticoDto.descripcion}">
+						title="#{registroDiagnosticoBean.diagnosticoDto.descripcion}">
 						<pre>
 							<h:outputText escape="false" styleClass="indicaciones"
-								value="#{buscarDiagnosticoBean.diagnosticoDto.indicacioneshtml}" />
+								value="#{registroDiagnosticoBean.diagnosticoDto.indicacioneshtml}" />
 						</pre>
 					</p:tab>
 				</p:accordionPanel>
 
 				<p:outputLabel value="Otras Recomendaciones a considerar"
-					rendered="#{buscarDiagnosticoBean.verDiagnostico}"
+					rendered="#{registroDiagnosticoBean.verDiagnostico}"
 					style="font-weight:bold !important; font-size:14px !important" />
 
 				<p:accordionPanel>
 
 					<c:forEach var="diag"
-						items="#{buscarDiagnosticoBean.lstDiagnostico}">
+						items="#{registroDiagnosticoBean.lstDiagnostico}">
 
 						<p:tab title="#{diag.descripcion}">
 							<pre>

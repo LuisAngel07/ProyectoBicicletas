@@ -23,7 +23,35 @@ public class DiagnosticoDaoImpl extends BaseDaoImpl implements DiagnosticoDao {
 	@Override
 	public List<DiagnosticoDto> listar(DiagnosticoDto prmLis) throws SQLException {
 		// TODO Auto-generated method stub
-		return null;
+		List<DiagnosticoDto> retorno = new ArrayList<>();
+		String query = "select id, descripcion, indicaciones, estado, usuario_creacion, fecha_creacion, usuario_modificacion, fecha_modificacion from tb_diagnostico where 1=1";
+
+		if (prmLis.getDescripcion() != null) {
+			query = query + " and MATCH(descripcion) AGAINST ('" + prmLis.getDescripcion() + "' IN BOOLEAN MODE)";
+		}
+		if (prmLis.getIndicaciones() != null) {
+			query = query + " and MATCH(indicaciones) AGAINST ('" + prmLis.getIndicaciones() + "' IN BOOLEAN MODE)";
+		}
+		if (prmLis.getEstado() != null) {
+			query = query + " and estado = '" + prmLis.getEstado() + "'";
+		}
+
+		ResultSet rs = super.listar(query);
+
+		while (rs.next()) {
+			DiagnosticoDto objNew = new DiagnosticoDto();
+			objNew.setId(rs.getInt("id"));
+			objNew.setDescripcion(rs.getString("descripcion"));
+			objNew.setIndicaciones(rs.getString("indicaciones"));
+			objNew.setEstado(rs.getString("estado"));
+			objNew.setUsuario_creacion(rs.getString("usuario_creacion"));
+			objNew.setFecha_creacion(rs.getDate("fecha_creacion"));
+			objNew.setUsuario_modificacion(rs.getString("usuario_modificacion"));
+			objNew.setFecha_modificacion(rs.getDate("fecha_modificacion"));
+			retorno.add(objNew);
+		}
+
+		return retorno;
 	}
 
 	@Override

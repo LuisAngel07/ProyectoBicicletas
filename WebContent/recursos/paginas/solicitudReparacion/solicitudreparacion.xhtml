@@ -27,13 +27,16 @@
 			<p:tabView activeIndex="#{solicitudReparacionBean.tabactive}"
 				id="tvReparacion" dynamic="true">
 				<p:tab title="Paso 1: Datos de la bicicleta"
+					disabled="#{solicitudReparacionBean.tabactive != 0}"
 					titleStyle="font-size:15px">
 					<ui:include src="datos_bicicleta.xhtml" />
 				</p:tab>
-				<p:tab title="Paso 2: Ubicación" titleStyle="font-size:15px">
+				<p:tab title="Paso 2: Ubicación" titleStyle="font-size:15px"
+					disabled="#{solicitudReparacionBean.tabactive != 1}">
 					<ui:include src="datos_ubicacion.xhtml" />
 				</p:tab>
-				<p:tab title="Paso 3: Datos del técnico" titleStyle="font-size:15px">
+				<p:tab title="Paso 3: Datos del técnico" titleStyle="font-size:15px"
+					disabled="true">
 					<ui:include src="datos_tecnico.xhtml" />
 				</p:tab>
 

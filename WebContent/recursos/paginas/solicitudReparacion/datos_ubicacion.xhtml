@@ -18,27 +18,40 @@
 			<p:outputLabel value="Departamento" />
 			<p:selectOneMenu disabled="true" filter="true"
 				filterMatchMode="contains" id="cboDepartamento"
+				value="#{solicitudReparacionBean.reparacionDto.ubigeoDto.codigodepartamento}"
 				valueChangeListener="#{solicitudReparacionBean.valueChangeDepartamento}">
 				<f:selectItem itemLabel="--Seleccione--" />
+				<f:selectItems value="#{solicitudReparacionBean.lstDepartamentos}"
+					var="obj" itemValue="#{obj.codigodepartamento}"
+					itemLabel="#{obj.nombredepartamento}" />
 				<p:ajax update="cboProvincia,cboDistrito" />
 			</p:selectOneMenu>
 			<p:outputLabel value="Provincia" />
 			<p:selectOneMenu id="cboProvincia" filter="true"
 				filterMatchMode="contains"
 				disabled="#{solicitudReparacionBean.accionPantalla.toString() == 'VER'}"
+				value="#{solicitudReparacionBean.reparacionDto.ubigeoDto.codigoprovincia}"
 				valueChangeListener="#{solicitudReparacionBean.valueChangeProvincia}">
 				<f:selectItem itemLabel="--Seleccione--" />
+				<f:selectItems value="#{solicitudReparacionBean.lstProvincias}"
+					var="obj" itemValue="#{obj.codigoprovincia}"
+					itemLabel="#{obj.nombreprovincia}" />
 				<p:ajax update="cboDistrito" />
 			</p:selectOneMenu>
 			<p:outputLabel value="Distrito" />
 			<p:selectOneMenu id="cboDistrito" filter="true"
 				filterMatchMode="contains"
-				disabled="#{solicitudReparacionBean.accionPantalla.toString() == 'VER'}">
+				disabled="#{solicitudReparacionBean.accionPantalla.toString() == 'VER'}"
+				value="#{solicitudReparacionBean.reparacionDto.ubigeoDto.codigodistrito}">
 				<f:selectItem itemLabel="--Seleccione--" />
+				<f:selectItems value="#{solicitudReparacionBean.lstDistritos}"
+					var="obj" itemValue="#{obj.codigodistrito}"
+					itemLabel="#{obj.nombredistrito}" />
 			</p:selectOneMenu>
 			<p:outputLabel value="Dirección" />
 			<p:inputTextarea id="txtDireccion"
-				disabled="#{solicitudReparacionBean.accionPantalla.toString() == 'VER'}"/>
+				disabled="#{solicitudReparacionBean.accionPantalla.toString() == 'VER'}"
+				value="#{solicitudReparacionBean.reparacionDto.direccion}" />
 
 		</p:panelGrid>
 

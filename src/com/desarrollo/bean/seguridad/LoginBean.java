@@ -11,6 +11,7 @@ import com.desarrollo.dominio.TecnicoDto;
 import com.desarrollo.dominio.UsuarioDto;
 import com.desarrollo.dominio.UsuarioPersonaDto;
 import com.desarrollo.enumerador.BaseEnum.accion_solicitada;
+import com.desarrollo.framework.controller.MensajeControllerGenerico;
 import com.desarrollo.framework.interfaces.IMantenimientoController;
 import com.desarrollo.util.UAplicacion;
 
@@ -91,6 +92,12 @@ public class LoginBean extends BaseBean implements IMantenimientoController {
 	public Boolean validar() throws Exception {
 		// TODO Auto-generated method stub
 		return true;
+	}
+
+	@Override
+	public String mensaje(MensajeControllerGenerico mensajeControllerGenerico) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	@Override

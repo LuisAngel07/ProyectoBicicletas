@@ -67,7 +67,7 @@ background-attachment: fixed;
 		</div>
 
 		<p:commandButton style="display:none" id="btnRegistroDiagnostico"
-			action="#{buscarDiagnosticoBean.iniciarControladora}"
+			action="#{registroDiagnosticoBean.iniciarControladora}"
 			onstart="PF('bUI').block();" oncomplete="PF('bUI').unblock();">
 			<f:setPropertyActionListener target="#{clienteBean.mostrarCliente}"
 				value="true" />

@@ -1,5 +1,7 @@
 package com.desarrollo.framework.interfaces;
 
+import com.desarrollo.framework.controller.MensajeControllerGenerico;
+
 public interface IMantenimientoController {
 
 	/**
@@ -156,7 +158,11 @@ public interface IMantenimientoController {
 	 * @return una cadena que representa la regla de navegacion (JSF
 	 *         navigation-case) de la pagina que se mostrara al finalizar la
 	 *         llamada al metodo
-*/
+	 */
+	public abstract String mensaje(
+			MensajeControllerGenerico mensajeControllerGenerico)
+			throws Exception;
+
 	/**
 	 * Inicializar Filtros Listado. <strong>inicializa los filtros por
 	 * defecto</strong> de busqueda del listado o de la busqueda a realizar esta

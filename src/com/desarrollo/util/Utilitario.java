@@ -7,7 +7,7 @@ public class Utilitario {
 
 	public static String[] arrayClaves = { "bicicleta", "bicicletas", "kilómetros", "pedales", "aro", "asiento",
 			"llanta", "grasa", "aceite", "teflón", "lubricar", "desajuste", "tubo", "tuerca", "cadena", "diagnóstico",
-			"frecuencia","rueda","Rueda" };
+			"frecuencia" };
 
 	public static String soloPalabras(String busqueda) {
 

@@ -14,41 +14,42 @@
 				columnClasses="ui-grid-col-4,ui-grid-col-8">
 
 				<p:outputLabel value="Documento"></p:outputLabel>
-				<p:inputText 
+				<p:inputText value="#{clienteBean.clienteDto.documento}"
 					maxlength="12">
 					<p:ajax event="blur" listener="#{clienteBean.buscar}"
 						update="frmPersona" process="@this" />
 				</p:inputText>
 
 				<p:outputLabel value="Nombres"></p:outputLabel>
-				<p:inputText 
+				<p:inputText value="#{clienteBean.clienteDto.nombres}"
 					maxlength="100" disabled="#{!clienteBean.habilitarDatos}" />
 
 				<p:outputLabel value="Apellido Paterno"></p:outputLabel>
-				<p:inputText 
+				<p:inputText value="#{clienteBean.clienteDto.apellidopaterno}"
 					maxlength="100" disabled="#{!clienteBean.habilitarDatos}" />
 
 				<p:outputLabel value="Apellido Materno"></p:outputLabel>
-				<p:inputText 
+				<p:inputText value="#{clienteBean.clienteDto.apellidomaterno}"
 					maxlength="100" disabled="#{!clienteBean.habilitarDatos}" />
 
 				<p:outputLabel value="Fecha Nacimiento"></p:outputLabel>
 				<p:calendar locale="es" navigator="true" pattern="dd/MM/yyyy"
-					disabled="#{!clienteBean.habilitarDatos}" />
+					disabled="#{!clienteBean.habilitarDatos}"
+					value="#{clienteBean.clienteDto.fechanacimiento}" />
 
 				<p:outputLabel value="Sexo"></p:outputLabel>
-				<p:selectOneRadio
+				<p:selectOneRadio value="#{clienteBean.clienteDto.sexo}"
 					unselectable="true" disabled="#{!clienteBean.habilitarDatos}">
 					<f:selectItem itemLabel="Hombre" itemValue="H" />
 					<f:selectItem itemLabel="Mujer" itemValue="M" />
 				</p:selectOneRadio>
 
 				<p:outputLabel value="Correo contacto"></p:outputLabel>
-				<p:inputText 
+				<p:inputText value="#{clienteBean.clienteDto.correo}"
 					maxlength="100" disabled="#{!clienteBean.habilitarDatos}" />
 
 				<p:outputLabel value="Celular o teléfono"></p:outputLabel>
-				<p:inputText  maxlength="9"
+				<p:inputText value="#{clienteBean.clienteDto.celular}" maxlength="9"
 					disabled="#{!clienteBean.habilitarDatos}" />
 			</p:panelGrid>
 
@@ -56,7 +57,10 @@
 				styleClass="ui-panelgrid-blank"
 				columnClasses="ui-grid-col-6,ui-grid-col-6">
 				<p:commandButton value="Confirmar Datos"
+					action="#{clienteBean.guardar}"
 					onclick="PF('popDatosPersona').hide();">
+					<f:setPropertyActionListener target="#{clienteBean.mostrarCliente}"
+						value="false" />
 				</p:commandButton>
 			</p:panelGrid>
 		</h:form>

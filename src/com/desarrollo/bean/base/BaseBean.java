@@ -3,16 +3,28 @@ package com.desarrollo.bean.base;
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
 
+import com.desarrollo.dominio.SessionDto;
 import com.desarrollo.enumerador.BaseEnum.accion_solicitada;
 import com.desarrollo.framework.interfaces.IMantenimientoController;
+import com.desarrollo.servicio.ClienteServicio;
 import com.desarrollo.servicio.DiagnosticoServicio;
+import com.desarrollo.servicio.MarcaServicio;
+import com.desarrollo.servicio.ModeloServicio;
+import com.desarrollo.servicio.ReparacionServicio;
 import com.desarrollo.servicio.TecnicoServicio;
+import com.desarrollo.servicio.UbigeoServicio;
 import com.desarrollo.servicio.UsuarioPersonaServicio;
 import com.desarrollo.servicio.UsuarioServicio;
+import com.desarrollo.servicio.impl.ClienteServicioImpl;
 import com.desarrollo.servicio.impl.DiagnosticoServicioImpl;
+import com.desarrollo.servicio.impl.MarcaServicioImpl;
+import com.desarrollo.servicio.impl.ModeloServicioImpl;
+import com.desarrollo.servicio.impl.ReparacionServicioImpl;
 import com.desarrollo.servicio.impl.TecnicoServicioImpl;
+import com.desarrollo.servicio.impl.UbigeoServicioImpl;
 import com.desarrollo.servicio.impl.UsuarioPersonaServicioImpl;
 import com.desarrollo.servicio.impl.UsuarioServicioImpl;
+import com.desarrollo.util.UAplicacion;
 
 public class BaseBean {
 
@@ -122,7 +134,7 @@ public class BaseBean {
 	public DiagnosticoServicio getDiagnosticoServicio() {
 		return DiagnosticoServicioImpl.getInstance();
 	}
-	
+
 	public UsuarioServicio getUsuarioServicio() {
 		return UsuarioServicioImpl.getInstance();
 	}
@@ -130,8 +142,32 @@ public class BaseBean {
 	public UsuarioPersonaServicio getUsuarioPersonaServicio() {
 		return UsuarioPersonaServicioImpl.getInstance();
 	}
-	
+
 	public TecnicoServicio getTecnicoServicio() {
 		return TecnicoServicioImpl.getInstance();
+	}
+
+	public ClienteServicio getClienteServicio() {
+		return ClienteServicioImpl.getInstance();
+	}
+
+	public UbigeoServicio getUbigeoServicio() {
+		return UbigeoServicioImpl.getInstance();
+	}
+
+	public ReparacionServicio getReparacionServicio() {
+		return ReparacionServicioImpl.getInstance();
+	}
+
+	public ModeloServicio getModeloServicio() {
+		return ModeloServicioImpl.getInstance();
+	}
+
+	public MarcaServicio getMarcaServicio() {
+		return MarcaServicioImpl.getInstance();
+	}
+	
+	public SessionDto getSessionDto() {
+		return (SessionDto) UAplicacion.getSessionValue("sessionDto");
 	}
 }
